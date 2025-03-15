@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <!-- Background rectangle with rounded corners -->
+  <rect x="10" y="10" width="40" height="40" rx="8" fill="#4f46e5" />
+  
+  <!-- Shield emoji centered in the square -->
+  <text x="30" y="37" font-size="24" text-anchor="middle" fill="white">🛡️</text>
+</svg>
