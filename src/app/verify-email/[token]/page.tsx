@@ -3,7 +3,11 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function VerifyEmail({ params }: { params: { token: string } }) {
+interface VerifyEmailProps {
+  params: { token: string };
+}
+
+export default function VerifyEmail({ params }: VerifyEmailProps) {
   const [status, setStatus] = useState<"loading" | "success" | "error">(
     "loading"
   );
