@@ -1,24 +1,26 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
-interface VerifyEmailProps {
-  params: { token: string };
-}
-
-export default function VerifyEmail({ params }: VerifyEmailProps) {
-  const [status, setStatus] = useState<"loading" | "success" | "error">(
-    "loading"
-  );
+export default function VerifyEmail() {
+  const [status, setStatus] = useState<"loading" | "success" | "error">("loading");
   const [message, setMessage] = useState("");
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const token = searchParams.get("token");
 
   useEffect(() => {
     const verifyEmail = async () => {
+      if (!token) {
+        setStatus("error");
+        setMessage("No token provided.");
+        return;
+      }
+
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/auth/verify-email/${params.token}`,
+          `${process.env.NEXT_PUBLIC_API_URL}/auth/verify-email/${token}`,
           {
             method: "GET",
           }
@@ -48,7 +50,7 @@ export default function VerifyEmail({ params }: VerifyEmailProps) {
     };
 
     verifyEmail();
-  }, [params.token]);
+  }, [token]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
