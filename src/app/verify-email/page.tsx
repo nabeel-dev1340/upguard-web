@@ -1,14 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
-export default function VerifyEmail() {
+function VerifyEmail() {
   const [status, setStatus] = useState<"loading" | "success" | "error">(
     "loading"
   );
   const [message, setMessage] = useState("");
-  const router = useRouter();
   const searchParams = useSearchParams();
   const token = searchParams.get("token");
 
@@ -90,15 +90,17 @@ export default function VerifyEmail() {
               Verification Failed
             </h2>
             <p className="text-gray-600 dark:text-gray-400">{message}</p>
-            <button
-              onClick={() => router.push("/")}
-              className="mt-6 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
-            >
-              Go to Homepage
-            </button>
           </div>
         )}
       </div>
     </div>
+  );
+}
+
+export default function VerifyEmailPage() {
+  return (
+    <Suspense>
+      <VerifyEmail />
+    </Suspense>
   );
 }
