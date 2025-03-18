@@ -77,14 +77,6 @@ function ResetPassword() {
     }
   };
 
-  const handleBackToLogin = () => {
-    // Close current window and send message to extension to show login
-    if (window.opener) {
-      window.opener.postMessage({ action: "showLogin" }, "*");
-    }
-    window.close();
-  };
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 p-4">
       <div className="max-w-md w-full">
@@ -156,34 +148,24 @@ function ResetPassword() {
                 </div>
               )}
 
-              <div className="flex flex-col space-y-4">
-                <button
-                  type="submit"
-                  disabled={status === "loading"}
-                  className={`w-full py-3 px-4 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium hover:from-indigo-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-300 ${
-                    status === "loading"
-                      ? "opacity-75 cursor-not-allowed"
-                      : "transform hover:-translate-y-0.5"
-                  }`}
-                >
-                  {status === "loading" ? (
-                    <div className="flex items-center justify-center">
-                      <div className="w-5 h-5 border-t-2 border-b-2 border-white rounded-full animate-spin mr-2"></div>
-                      Resetting Password...
-                    </div>
-                  ) : (
-                    "Reset Password"
-                  )}
-                </button>
-
-                <button
-                  type="button"
-                  onClick={handleBackToLogin}
-                  className="text-indigo-600 hover:text-indigo-700 text-sm font-medium"
-                >
-                  ← Back to Login
-                </button>
-              </div>
+              <button
+                type="submit"
+                disabled={status === "loading"}
+                className={`w-full py-3 px-4 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium hover:from-indigo-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-300 ${
+                  status === "loading"
+                    ? "opacity-75 cursor-not-allowed"
+                    : "transform hover:-translate-y-0.5"
+                }`}
+              >
+                {status === "loading" ? (
+                  <div className="flex items-center justify-center">
+                    <div className="w-5 h-5 border-t-2 border-b-2 border-white rounded-full animate-spin mr-2"></div>
+                    Resetting Password...
+                  </div>
+                ) : (
+                  "Reset Password"
+                )}
+              </button>
             </form>
           </div>
         )}
