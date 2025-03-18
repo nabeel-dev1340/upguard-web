@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     creator: "@upguard",
   },
   verification: {
-    google: "your-google-verification-id", // Replace with your actual Google verification ID
+    google: "YqJd52EC1ffv3QLjZ6iT-5xx5RMTzTbIczcs1ib8Rfg",
   },
 };
 
