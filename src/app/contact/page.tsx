@@ -1,9 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { useState, FormEvent, ChangeEvent } from "react";
+
+interface FormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
+interface SubmitStatus {
+  success: boolean;
+  message: string;
+}
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     subject: "",
@@ -11,16 +23,11 @@ export default function Contact() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<null | {
-    success: boolean;
-    message: string;
-  }>(null);
+  const [submitStatus, setSubmitStatus] = useState<SubmitStatus | null>(null);
 
   const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ): void => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -28,37 +35,56 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus(null);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/contact/customer-support`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitStatus({
+          success: true,
+          message: data.message,
+        });
+        // Clear form
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setSubmitStatus({
+          success: false,
+          message: data.message || "Failed to send message",
+        });
+      }
+    } catch (error) {
+      console.error("Contact form error:", error);
       setSubmitStatus({
-        success: true,
-        message:
-          "Thank you! Your message has been received. We'll get back to you shortly.",
+        success: false,
+        message: "Something went wrong. Please try again later.",
       });
-
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-
-      // Clear status after 5 seconds
-      setTimeout(() => {
-        setSubmitStatus(null);
-      }, 5000);
-    }, 1500);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 font-[family-name:var(--font-geist-sans)]">
-
       {/* Contact Content */}
       <div className="container mx-auto px-6 py-12">
         <div className="max-w-5xl mx-auto">
@@ -85,6 +111,7 @@ export default function Contact() {
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
+                        aria-hidden="true"
                       >
                         <path
                           strokeLinecap="round"
@@ -97,10 +124,10 @@ export default function Contact() {
                     <div>
                       <h3 className="text-md font-semibold mb-1">Email</h3>
                       <a
-                        href="mailto:nabeelsharafat@gmail.com"
+                        href="mailto:support@up-guard.com"
                         className="text-indigo-600 dark:text-indigo-400 hover:underline"
                       >
-                        nabeelsharafat@gmail.com
+                        support@up-guard.com
                       </a>
                     </div>
                   </div>
@@ -370,7 +397,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }
