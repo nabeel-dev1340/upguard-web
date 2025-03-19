@@ -1,5 +1,7 @@
 import Link from "next/link";
 import FaqAccordion from "@/components/FaqAccordion";
+import Image from "next/image";
+import ScreenshotsCarousel from "@/components/ScreenshotsCarousel";
 
 export default function Home() {
   // FAQ data
@@ -12,7 +14,7 @@ export default function Home() {
     {
       question: "How many job scans do I get with the free trial?",
       answer:
-        "The free trial includes 20 job scans. After using all your free scans, you'll need to upgrade to a premium subscription to continue using UpGuard.",
+        "The free trial includes 10 job scans. After using all your free scans, you'll need to upgrade to a premium subscription to continue using UpGuard.",
     },
     {
       question: "Can UpGuard guarantee it will catch all scams?",
@@ -27,7 +29,7 @@ export default function Home() {
     {
       question: "When will premium subscriptions be available?",
       answer:
-        "We're working on launching premium subscriptions with unlimited job scans very soon! In the meantime, you can enjoy our free trial with 20 job scans to experience the full capabilities of UpGuard. Sign up for our newsletter to be the first to know when premium plans launch.",
+        "We're working on launching premium subscriptions with unlimited job scans very soon! In the meantime, you can enjoy our free trial with 10 job scans to experience the full capabilities of UpGuard. Sign up for our newsletter to be the first to know when premium plans launch.",
     },
   ];
 
@@ -44,7 +46,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-              AI-powered scam detection for Upwork jobs. Stay safe and focus on
+              AI-powered scam detection for fake Upwork jobs. Stay safe and focus on
               legitimate opportunities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -142,12 +144,7 @@ export default function Home() {
               <div className="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mb-6">
                 <span className="text-2xl">🔍</span>
               </div>
-              <div className="flex justify-between items-start">
-                <h3 className="text-xl font-bold mb-3">Risk Assessment</h3>
-                <span className="bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded-full">
-                  Coming Soon: Premium
-                </span>
-              </div>
+              <h3 className="text-xl font-bold mb-3">Risk Assessment</h3>
               <p className="text-gray-600 dark:text-gray-400">
                 Get detailed risk scores and specific warning signs that might
                 indicate fraudulent opportunities.
@@ -222,7 +219,7 @@ export default function Home() {
                     FREE TRIAL
                   </span>
                   <span className="text-gray-700 dark:text-gray-300">
-                    20 scans included
+                    10 scans included
                   </span>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 mt-1">
@@ -237,6 +234,30 @@ export default function Home() {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Screenshots Section */}
+      <section className="container mx-auto px-6 py-16 md:py-24 overflow-hidden">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            See UpGuard in Action
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            Save your precious connects and time by scanning jobs before you
+            apply.
+          </p>
+        </div>
+
+        <div className="relative">
+          {/* Background gradient effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-3xl" />
+
+          <ScreenshotsCarousel />
+
+          {/* Decorative elements */}
+          <div className="absolute -top-4 -right-4 w-24 h-24 bg-indigo-500/10 rounded-full blur-2xl" />
+          <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl" />
         </div>
       </section>
 
@@ -279,59 +300,164 @@ export default function Home() {
       </section>
 
       {/* Subscription Plans */}
-      <div className="container mx-auto px-6 py-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-100 dark:border-indigo-800/30 rounded-xl p-6 shadow-sm">
-            <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="md:w-1/4 flex justify-center">
-                <div className="bg-indigo-600 w-20 h-20 rounded-full flex items-center justify-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-10 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
+      <section id="pricing" className="container mx-auto px-6 py-16 md:py-24">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Simple, Transparent Pricing
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            Choose the plan that best fits your needs. Start with our free trial
+            or upgrade to premium for unlimited access.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* Free Plan */}
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-8 border border-gray-200 dark:border-gray-700">
+            <div className="text-center mb-6">
+              <div className="inline-block bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 px-4 py-1 rounded-full text-sm font-medium mb-4">
+                Free Trial
               </div>
-              <div className="md:w-3/4">
-                <h3 className="text-xl font-bold mb-2 text-center md:text-left">
-                  Subscription Plans
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Start with our{" "}
-                  <span className="font-semibold">Free Trial</span> that
-                  includes 20 job scans. Our{" "}
-                  <span className="font-semibold">Premium Plan</span> with
-                  unlimited scans is coming soon!
-                </p>
-                <div className="flex items-center text-indigo-600 dark:text-indigo-400 font-medium">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 mr-2"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  Stay tuned for our launch announcement
-                </div>
+              <h3 className="text-2xl font-bold mb-2">Basic Plan</h3>
+              <div className="text-4xl font-bold mb-2">$0</div>
+              <p className="text-gray-600 dark:text-gray-400">
+                Perfect for getting started
+              </p>
+            </div>
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-center">
+                <svg
+                  className="w-5 h-5 text-green-500 mr-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span>10 job scans per month</span>
+              </li>
+              <li className="flex items-center">
+                <svg
+                  className="w-5 h-5 text-green-500 mr-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span>Advanced risk assessment</span>
+              </li>
+              <li className="flex items-center">
+                <svg
+                  className="w-5 h-5 text-green-500 mr-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span>Email support</span>
+              </li>
+            </ul>
+            <a
+              href="#install"
+              className="block w-full py-3 px-4 rounded-full border-2 border-indigo-600 text-indigo-600 font-medium hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition text-center"
+            >
+              Get Started
+            </a>
+          </div>
+
+          {/* Premium Plan */}
+          <div className="bg-gradient-to-b from-indigo-600 to-purple-600 rounded-2xl shadow-md p-8 border border-indigo-500 relative transform hover:-translate-y-1 transition-transform duration-300">
+            <div className="absolute top-0 right-0 mt-4 mr-4">
+              <div className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
+                Most Popular
               </div>
             </div>
+            <div className="text-center mb-6">
+              <div className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-1 rounded-full text-sm font-medium mb-4">
+                Premium
+              </div>
+              <h3 className="text-2xl font-bold mb-2 text-white">
+                Premium Plan
+              </h3>
+              <div className="text-4xl font-bold mb-2 text-white">$6.99</div>
+              <p className="text-white/80">per month</p>
+            </div>
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-center text-white">
+                <svg
+                  className="w-5 h-5 text-white mr-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span>500 job scans per month</span>
+              </li>
+              <li className="flex items-center text-white">
+                <svg
+                  className="w-5 h-5 text-white mr-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span>Advanced risk assessment</span>
+              </li>
+              <li className="flex items-center text-white">
+                <svg
+                  className="w-5 h-5 text-white mr-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span>Priority support</span>
+              </li>
+            </ul>
+            <a
+              href="#install"
+              className="block w-full py-3 px-4 rounded-full bg-white text-indigo-600 font-medium hover:bg-gray-50 transition text-center"
+            >
+              Upgrade Now
+            </a>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Testimonials */}
       <section
@@ -458,52 +584,43 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to protect your freelance career?
             </h2>
-            <p className="text-xl mb-4 max-w-2xl mx-auto">
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
               Get started with UpGuard today and stay safe on Upwork.
             </p>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-8 inline-block">
-              <div className="flex items-center">
-                <div className="bg-yellow-400 p-1 rounded-full mr-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 text-yellow-900"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
-                  </svg>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="https://chromewebstore.google.com/detail/upguard-ai-powered-upwork/knbbafgpgdjpenknicfagioijfhcomfp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-4 rounded-full bg-white text-indigo-600 font-bold hover:bg-gray-100 transition shadow-md hover:shadow-lg"
+              >
+                <div className="flex items-center space-x-2">
+                  <Image
+                    src="/chrome_logo.png"
+                    alt="Chrome"
+                    width={25}
+                    height={25}
+                  />
+                  <span>Add to Chrome</span>
                 </div>
-                <p className="text-sm font-medium">
-                  Premium subscriptions with unlimited scans coming soon!
-                </p>
-              </div>
+              </a>
+              <a
+                href="https://chromewebstore.google.com/detail/upguard-ai-powered-upwork/knbbafgpgdjpenknicfagioijfhcomfp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-4 rounded-full bg-white text-indigo-600 font-bold hover:bg-gray-100 transition shadow-md hover:shadow-lg"
+              >
+                <div className="flex items-center space-x-2">
+                  <Image
+                    src="/edge_logo.svg"
+                    alt="Edge"
+                    width={25}
+                    height={25}
+                  />
+                  <span>Add to Edge</span>
+                </div>
+              </a>
             </div>
-            <a
-              href="https://chrome.google.com/webstore/detail/your-extension-id"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-4 rounded-full bg-white text-indigo-600 font-bold hover:bg-gray-100 transition shadow-md hover:shadow-lg"
-            >
-              <div className="flex items-center space-x-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-5 h-5"
-                >
-                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                  <path d="M2 17l10 5 10-5"></path>
-                  <path d="M2 12l10 5 10-5"></path>
-                </svg>
-                <span>Add to Chrome</span>
-              </div>
-            </a>
           </div>
         </div>
       </section>

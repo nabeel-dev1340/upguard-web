@@ -129,6 +129,13 @@ export default function MobileNav() {
                 Features
               </a>
               <a
+                href="#pricing"
+                onClick={closeMenu}
+                className="text-xl font-medium text-gray-800 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition"
+              >
+                Pricing
+              </a>
+              <a
                 href="#how-it-works"
                 onClick={closeMenu}
                 className="text-xl font-medium text-gray-800 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition"
@@ -179,7 +186,9 @@ export default function MobileNav() {
 
           <div className="p-6 border-t border-gray-200 dark:border-gray-700">
             <a
-              href="#install"
+              href="https://chromewebstore.google.com/detail/upguard-ai-powered-upwork/knbbafgpgdjpenknicfagioijfhcomfp"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={closeMenu}
               className="block w-full py-3 px-4 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium hover:from-indigo-700 hover:to-purple-700 transition text-center shadow-md hover:shadow-lg"
             >

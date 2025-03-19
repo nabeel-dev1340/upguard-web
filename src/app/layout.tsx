@@ -115,6 +115,12 @@ export default function RootLayout({
                   Features
                 </Link>
                 <Link
+                  href="/#pricing"
+                  className="hover:text-indigo-600 transition"
+                >
+                  Pricing
+                </Link>
+                <Link
                   href="/#how-it-works"
                   className="hover:text-indigo-600 transition"
                 >
@@ -131,7 +137,9 @@ export default function RootLayout({
                 </Link>
               </div>
               <Link
-                href="/#install"
+                href="https://chromewebstore.google.com/detail/upguard-ai-powered-upwork/knbbafgpgdjpenknicfagioijfhcomfp"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hidden md:inline-block px-6 py-2 rounded-full bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition shadow-md hover:shadow-lg"
               >
                 Install Now
