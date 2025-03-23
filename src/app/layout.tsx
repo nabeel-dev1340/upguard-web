@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "UpGuard - AI-powered Upwork Job Scanner",
+  title: "UpGuardian - AI-powered Upwork Job Scanner",
   description:
-    "Protect your freelance career with UpGuard's AI-powered Upwork job scanner. Detect scams and stay safe on Upwork with real-time risk assessment.",
+    "Protect your freelance career with UpGuardian's AI-powered Upwork job scanner. Detect scams and stay safe on Upwork with real-time risk assessment.",
   keywords: [
     "upwork safety",
     "freelance scam detection",
@@ -59,10 +59,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://up-guard.com",
-    siteName: "UpGuard",
-    title: "UpGuard - AI-powered Upwork Job Scanner",
+    siteName: "UpGuardian",
+    title: "UpGuardian - AI-powered Upwork Job Scanner",
     description:
-      "Protect your freelance career with UpGuard's AI-powered Upwork job scanner. Detect scams and stay safe on Upwork with real-time risk assessment.",
+      "Protect your freelance career with UpGuardian's AI-powered Upwork job scanner. Detect scams and stay safe on Upwork with real-time risk assessment.",
     images: [
       {
         url: "https://up-guard.com/og-image.png",
@@ -74,9 +74,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "UpGuard - AI-powered Upwork Job Scanner",
+    title: "UpGuardian - AI-powered Upwork Job Scanner",
     description:
-      "Protect your freelance career with UpGuard's AI-powered Upwork job scanner. Detect scams and stay safe on Upwork.",
+      "Protect your freelance career with UpGuardian's AI-powered Upwork job scanner. Detect scams and stay safe on Upwork.",
     images: ["https://up-guard.com/twitter-image.png"],
     creator: "@upguard",
   },
@@ -104,7 +104,7 @@ export default function RootLayout({
                   <span className="text-white text-xl">🛡️</span>
                 </div>
                 <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 text-transparent bg-clip-text">
-                  UpGuard
+                  UpGuardian
                 </span>
               </Link>
               <div className="hidden md:flex space-x-8 text-gray-700 dark:text-gray-300">
@@ -160,7 +160,7 @@ export default function RootLayout({
                   <span className="text-white text-sm">🛡️</span>
                 </div>
                 <span className="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 text-transparent bg-clip-text">
-                  UpGuard
+                  UpGuardian
                 </span>
               </div>
               <div className="flex flex-wrap justify-center gap-8 text-gray-700 dark:text-gray-300">
@@ -185,7 +185,7 @@ export default function RootLayout({
               </div>
             </div>
             <div className="text-center mt-8 text-gray-600 dark:text-gray-400 text-sm">
-              © {new Date().getFullYear()} UpGuard. All rights reserved.
+              © {new Date().getFullYear()} UpGuardian. All rights reserved.
             </div>
           </footer>
         </div>
@@ -196,7 +196,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              name: "UpGuard",
+              name: "UpGuardian",
               applicationCategory: "BrowserApplication",
               operatingSystem: "Chrome",
               offers: {

@@ -93,7 +93,7 @@ export default function Contact() {
               Get in Touch
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Have questions about UpGuard? We&apos;re here to help.
+              Have questions about UpGuardian? We&apos;re here to help.
             </p>
           </div>
 
@@ -337,10 +337,10 @@ export default function Contact() {
           <div className="space-y-6">
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-100 dark:border-gray-700">
               <h3 className="text-lg font-semibold mb-2">
-                How does UpGuard work?
+                How does UpGuardian work?
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
-                UpGuard uses advanced AI technology to analyze Upwork job
+                UpGuardian uses advanced AI technology to analyze Upwork job
                 listings and identify potential red flags that might indicate
                 scams or problematic clients. The extension provides risk
                 assessments and detailed explanations to help you make informed
@@ -355,19 +355,19 @@ export default function Contact() {
               <p className="text-gray-600 dark:text-gray-400">
                 The free trial includes 20 job scans. After using all your free
                 scans, you&apos;ll need to upgrade to a premium subscription to
-                continue using UpGuard.
+                continue using UpGuardian.
               </p>
             </div>
 
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-100 dark:border-gray-700">
               <h3 className="text-lg font-semibold mb-2">
-                Can UpGuard guarantee it will catch all scams?
+                Can UpGuardian guarantee it will catch all scams?
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
-                While UpGuard uses advanced technology to identify potential
-                scams, no system is perfect. We recommend using UpGuard as one
-                tool in your evaluation process, alongside your own judgment and
-                Upwork&apos;s built-in protections.
+                While UpGuardian uses advanced technology to identify potential
+                scams, no system is perfect. We recommend using UpGuardian as
+                one tool in your evaluation process, alongside your own judgment
+                and Upwork&apos;s built-in protections.
               </p>
             </div>
 
@@ -390,7 +390,7 @@ export default function Contact() {
                 We&apos;re working on launching premium subscriptions with
                 unlimited job scans very soon! In the meantime, you can enjoy
                 our free trial with 20 job scans to experience the full
-                capabilities of UpGuard. Sign up for our newsletter to be the
+                capabilities of UpGuardian. Sign up for our newsletter to be the
                 first to know when premium plans launch.
               </p>
             </div>

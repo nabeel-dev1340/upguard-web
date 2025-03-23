@@ -7,29 +7,29 @@ export default function Home() {
   // FAQ data
   const faqs = [
     {
-      question: "How does UpGuard work?",
+      question: "How does UpGuardian work?",
       answer:
-        "UpGuard uses advanced AI technology to analyze Upwork job listings and identify potential red flags that might indicate scams or problematic clients. The extension provides risk assessments and detailed explanations to help you make informed decisions.",
+        "UpGuardian uses advanced AI technology to analyze Upwork job listings and identify potential red flags that might indicate scams or problematic clients. The extension provides risk assessments and detailed explanations to help you make informed decisions.",
     },
     {
       question: "How many job scans do I get with the free trial?",
       answer:
-        "The free trial includes 10 job scans. After using all your free scans, you'll need to upgrade to a premium subscription to continue using UpGuard.",
+        "The free trial includes 10 job scans. After using all your free scans, you'll need to upgrade to a premium subscription to continue using UpGuardian.",
     },
     {
-      question: "Can UpGuard guarantee it will catch all scams?",
+      question: "Can UpGuardian guarantee it will catch all scams?",
       answer:
-        "While UpGuard uses advanced technology to identify potential scams, no system is perfect. We recommend using UpGuard as one tool in your evaluation process, alongside your own judgment and Upwork's built-in protections.",
+        "While UpGuardian uses advanced technology to identify potential scams, no system is perfect. We recommend using UpGuardian as one tool in your evaluation process, alongside your own judgment and Upwork's built-in protections.",
     },
     {
       question: "How do I cancel my subscription?",
       answer:
-        "You can cancel your subscription at any time by going to your account settings within the extension. If you have any issues, please contact our support team at support@upguard.com.",
+        "You can cancel your subscription at any time by going to your account settings within the extension. If you have any issues, please contact our support team at support@up-guard.com.",
     },
     {
       question: "When will premium subscriptions be available?",
       answer:
-        "We're working on launching premium subscriptions with unlimited job scans very soon! In the meantime, you can enjoy our free trial with 10 job scans to experience the full capabilities of UpGuard. Sign up for our newsletter to be the first to know when premium plans launch.",
+        "We're working on launching premium subscriptions with unlimited job scans very soon! In the meantime, you can enjoy our free trial with 10 job scans to experience the full capabilities of UpGuardian. Sign up for our newsletter to be the first to know when premium plans launch.",
     },
   ];
 
@@ -123,7 +123,7 @@ export default function Home() {
               Powerful Features
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              UpGuard helps you identify potential scams before you waste time
+              UpGuardian helps you identify potential scams before you waste time
               on fraudulent job listings.
             </p>
           </div>
@@ -173,7 +173,7 @@ export default function Home() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            UpGuard seamlessly integrates with Upwork to protect you from scams.
+            UpGuardian seamlessly integrates with Upwork to protect you from scams.
           </p>
         </div>
 
@@ -184,7 +184,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-bold mb-2">Install Extension</h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Add UpGuard to Chrome in just a few clicks.
+              Add UpGuardian to Chrome in just a few clicks.
             </p>
           </div>
 
@@ -241,7 +241,7 @@ export default function Home() {
       <section className="container mx-auto px-6 py-16 md:py-24 overflow-hidden">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            See UpGuard in Action
+            See UpGuardian in Action
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Save your precious connects and time by scanning jobs before you
@@ -269,7 +269,7 @@ export default function Home() {
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Have questions about UpGuard? Find answers to common questions
+              Have questions about UpGuardian? Find answers to common questions
               below.
             </p>
           </div>
@@ -470,7 +470,7 @@ export default function Home() {
               What Freelancers Say
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Hear from freelancers who use UpGuard to stay safe on Upwork.
+              Hear from freelancers who use UpGuardian to stay safe on Upwork.
             </p>
           </div>
 
@@ -525,7 +525,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-600 dark:text-gray-400 mb-6">
-                &quot;UpGuard saved me from a dangerous payment scam. The
+                &quot;UpGuardian saved me from a dangerous payment scam. The
                 warnings were clear and helped me avoid a disaster.&quot;
               </p>
               <div className="flex items-center">
@@ -585,7 +585,7 @@ export default function Home() {
               Ready to protect your freelance career?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Get started with UpGuard today and stay safe on Upwork.
+              Get started with UpGuardian today and stay safe on Upwork.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a

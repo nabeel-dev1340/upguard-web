@@ -24,7 +24,7 @@ export default function TermsOfService() {
               1. Acceptance of Terms
             </h2>
             <p className="mb-4">
-              By installing and using the UpGuard Chrome extension
+              By installing and using the UpGuardian Chrome extension
               (&quot;Extension&quot;), you agree to be bound by these Terms of
               Service. If you do not agree to these terms, please do not use our
               Extension.
@@ -34,7 +34,7 @@ export default function TermsOfService() {
               2. Description of Service
             </h2>
             <p className="mb-4">
-              UpGuard is a Chrome extension designed to analyze Upwork job
+              UpGuardian is a Chrome extension designed to analyze Upwork job
               postings to identify potential scams and suspicious activities.
               The Extension uses AI technology to provide risk assessments of
               job listings.
@@ -54,7 +54,7 @@ export default function TermsOfService() {
               4. Free Trial and Subscription
             </h2>
             <p className="mb-4">
-              UpGuard offers a free trial that includes 20 job scans. After
+              UpGuardian offers a free trial that includes 20 job scans. After
               using all free scans, users may purchase a subscription for
               continued use. Subscription terms and pricing will be clearly
               displayed before purchase.
@@ -65,7 +65,7 @@ export default function TermsOfService() {
             </h2>
             <p className="mb-4">
               The Extension, including all content, features, and functionality,
-              is owned by UpGuard and is protected by international copyright,
+              is owned by UpGuardian and is protected by international copyright,
               trademark, and other intellectual property laws.
             </p>
 
@@ -98,7 +98,7 @@ export default function TermsOfService() {
               8. Limitation of Liability
             </h2>
             <p className="mb-4">
-              TO THE MAXIMUM EXTENT PERMITTED BY LAW, UPGUARD SHALL NOT BE
+              TO THE MAXIMUM EXTENT PERMITTED BY LAW, UPGUARDIAN SHALL NOT BE
               LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR
               PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER
               INCURRED DIRECTLY OR INDIRECTLY.
@@ -135,10 +135,10 @@ export default function TermsOfService() {
             <p className="mb-4">
               If you have any questions about these Terms, please contact us at{" "}
               <a
-                href="mailto:support@upguard.com"
+                href="mailto:support@up-guard.com"
                 className="text-indigo-600 dark:text-indigo-400 hover:underline"
               >
-                support@upguard.com
+                support@up-guard.com
               </a>
               .
             </p>

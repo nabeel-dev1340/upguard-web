@@ -20,7 +20,7 @@ export default function PrivacyPolicy() {
             </p>
 
             <p className="mb-6">
-              At UpGuard, we take your privacy seriously. This Privacy Policy
+              At UpGuardian, we take your privacy seriously. This Privacy Policy
               explains how we collect, use, disclose, and safeguard your
               information when you use our Chrome extension. Please read this
               privacy policy carefully. If you do not agree with the terms of
@@ -168,10 +168,10 @@ export default function PrivacyPolicy() {
               If you have questions or concerns about this Privacy Policy,
               please contact us at{" "}
               <a
-                href="mailto:privacy@upguard.com"
+                href="mailto:privacy@up-guard.com"
                 className="text-indigo-600 dark:text-indigo-400 hover:underline"
               >
-                privacy@upguard.com
+                privacy@up-guard.com
               </a>
               .
             </p>

@@ -93,7 +93,7 @@ export default function MobileNav() {
                   <span className="text-white text-xl">🛡️</span>
                 </div>
                 <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 text-transparent bg-clip-text">
-                  UpGuard
+                  UpGuardian
                 </span>
               </div>
               <button

@@ -8,23 +8,23 @@ import Image from "next/image";
 const screenshots = [
   {
     src: "/extension_ss_1.png",
-    alt: "UpGuard Extension Screenshot 1",
+    alt: "UpGuardian Extension Screenshot 1",
   },
   {
     src: "/extension_ss_2.png",
-    alt: "UpGuard Extension Screenshot 2",
+    alt: "UpGuardian Extension Screenshot 2",
   },
   {
     src: "/extension_ss_3.png",
-    alt: "UpGuard Extension Screenshot 3",
+    alt: "UpGuardian Extension Screenshot 3",
   },
   {
     src: "/extension_ss_4.png",
-    alt: "UpGuard Extension Screenshot 4",
+    alt: "UpGuardian Extension Screenshot 4",
   },
   {
     src: "/extension_ss_5.png",
-    alt: "UpGuard Extension Screenshot 5",
+    alt: "UpGuardian Extension Screenshot 5",
   },
 ];
 
