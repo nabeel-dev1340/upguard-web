@@ -9,12 +9,12 @@ export default function Home() {
     {
       question: "How does UpGuardian work?",
       answer:
-        "UpGuardian uses advanced AI technology to analyze Upwork job listings and identify potential red flags that might indicate scams or problematic clients. The extension provides risk assessments and detailed explanations to help you make informed decisions.",
+        "UpGuardian uses advanced AI technology to analyze Upwork job listings and identify potential red flags that might indicate scams. It also helps you generate professional responses to client messages, making your communication more effective.",
     },
     {
       question: "How many job scans do I get with the free trial?",
       answer:
-        "The free trial includes 10 job scans. After using all your free scans, you'll need to upgrade to a premium subscription to continue using UpGuardian.",
+        "The free trial includes 10 job scans and unlimited AI message generation. After using all your free scans, you'll need to upgrade to a premium subscription to continue scanning jobs, but message generation remains unlimited.",
     },
     {
       question: "Can UpGuardian guarantee it will catch all scams?",
@@ -46,8 +46,8 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-              AI-powered scam detection for fake Upwork jobs. Stay safe and focus on
-              legitimate opportunities.
+              AI-powered scam detection and professional message generation for
+              Upwork. Stay safe and communicate effectively with clients.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -123,8 +123,8 @@ export default function Home() {
               Powerful Features
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              UpGuardian helps you identify potential scams before you waste time
-              on fraudulent job listings.
+              UpGuardian helps you identify potential scams before you waste
+              time on fraudulent job listings.
             </p>
           </div>
 
@@ -142,23 +142,23 @@ export default function Home() {
 
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition p-8 border border-gray-100 dark:border-gray-700">
               <div className="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mb-6">
+                <span className="text-2xl">✨</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">AI Message Generation</h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                Generate professional responses to client messages with our AI
+                assistant. Communicate effectively and win more projects.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition p-8 border border-gray-100 dark:border-gray-700">
+              <div className="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mb-6">
                 <span className="text-2xl">🔍</span>
               </div>
               <h3 className="text-xl font-bold mb-3">Risk Assessment</h3>
               <p className="text-gray-600 dark:text-gray-400">
                 Get detailed risk scores and specific warning signs that might
                 indicate fraudulent opportunities.
-              </p>
-            </div>
-
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition p-8 border border-gray-100 dark:border-gray-700">
-              <div className="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mb-6">
-                <span className="text-2xl">⚡</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3">Save Time & Stay Safe</h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                Focus on legitimate opportunities and avoid wasting time on
-                scams, protecting your Upwork reputation.
               </p>
             </div>
           </div>
@@ -173,18 +173,19 @@ export default function Home() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            UpGuardian seamlessly integrates with Upwork to protect you from scams.
+            UpGuardian seamlessly integrates with Upwork to protect you from
+            scams and help you communicate professionally.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <div className="text-center">
             <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">1</span>
             </div>
             <h3 className="text-xl font-bold mb-2">Install Extension</h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Add UpGuardian to Chrome in just a few clicks.
+              Add UpGuardian to Chrome or Edge in just a few clicks.
             </p>
           </div>
 
@@ -192,9 +193,10 @@ export default function Home() {
             <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">2</span>
             </div>
-            <h3 className="text-xl font-bold mb-2">Browse Upwork Jobs</h3>
+            <h3 className="text-xl font-bold mb-2">Browse Jobs</h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Navigate to any job listing on Upwork.
+              Navigate to any job listing on Upwork and scan for potential
+              risks.
             </p>
           </div>
 
@@ -202,35 +204,51 @@ export default function Home() {
             <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">3</span>
             </div>
-            <h3 className="text-xl font-bold mb-2">Scan for Red Flags</h3>
+            <h3 className="text-xl font-bold mb-2">Get Risk Analysis</h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Click the scan button on any job page to get an instant risk
-              analysis.
+              Receive instant risk assessment with detailed explanations of
+              potential red flags.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">4</span>
+            </div>
+            <h3 className="text-xl font-bold mb-2">Communicate Effectively</h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Use AI to generate professional responses to client messages and
+              win more projects.
             </p>
           </div>
         </div>
 
-        <div className="mt-16 text-center">
-          <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 max-w-3xl mx-auto border border-gray-200 dark:border-gray-700">
-            <div className="flex flex-col md:flex-row items-center justify-center md:justify-between">
-              <div className="mb-4 md:mb-0">
-                <div className="flex items-center">
-                  <span className="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400 text-xs font-medium px-2.5 py-0.5 rounded-full mr-2">
+        <div className="mt-16">
+          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/10 dark:to-purple-900/10 rounded-xl p-8 max-w-3xl mx-auto border border-gray-200 dark:border-gray-700">
+            <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-6">
+              <div className="text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
+                  <span className="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400 text-xs font-medium px-2.5 py-0.5 rounded-full">
                     FREE TRIAL
                   </span>
                   <span className="text-gray-700 dark:text-gray-300">
                     10 scans included
                   </span>
                 </div>
-                <p className="text-gray-600 dark:text-gray-400 mt-1">
-                  No credit card required to start
-                </p>
+                <div className="flex items-center justify-center md:justify-start gap-3">
+                  <span className="bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-400 text-xs font-medium px-2.5 py-0.5 rounded-full">
+                    NEW
+                  </span>
+                  <span className="text-gray-700 dark:text-gray-300">
+                    Unlimited AI messages
+                  </span>
+                </div>
               </div>
               <a
                 href="#install"
-                className="px-6 py-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium hover:from-indigo-700 hover:to-purple-700 transition shadow-md hover:shadow-lg"
+                className="px-6 py-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium hover:from-indigo-700 hover:to-purple-700 transition shadow-md hover:shadow-lg whitespace-nowrap"
               >
-                Install Now
+                Install Now - It&apos;s Free
               </a>
             </div>
           </div>
@@ -355,6 +373,22 @@ export default function Home() {
                     d="M5 13l4 4L19 7"
                   ></path>
                 </svg>
+                <span>Unlimited AI message generation</span>
+              </li>
+              <li className="flex items-center">
+                <svg
+                  className="w-5 h-5 text-green-500 mr-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
                 <span>Advanced risk assessment</span>
               </li>
               <li className="flex items-center">
@@ -415,6 +449,22 @@ export default function Home() {
                   ></path>
                 </svg>
                 <span>500 job scans per month</span>
+              </li>
+              <li className="flex items-center text-white">
+                <svg
+                  className="w-5 h-5 text-white mr-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span>Unlimited AI message generation</span>
               </li>
               <li className="flex items-center text-white">
                 <svg
